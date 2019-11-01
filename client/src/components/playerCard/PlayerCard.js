@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class PlayerCard extends Component {
-  constructor(props) {
-    super(props);
-  }
   //player data has country id name and searches
   render() {
     return (
@@ -11,7 +8,6 @@ class PlayerCard extends Component {
         <p>Name:{this.props.player.name}</p>
         <p>Country: {this.props.player.country}</p>
         <p>Searches: {this.props.player.searches}</p>
-
       </div>
     );
   }

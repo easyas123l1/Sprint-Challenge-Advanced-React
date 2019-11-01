@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import PlayerCard from './components/playerCard/PlayerCard';
+import Navbar from './components/Navbar/Navbar';
+
 
 class App extends Component{
   state = {
-    players: []
+    players: [],
   }
 
   axiosFetch = () => {
@@ -28,6 +30,8 @@ class App extends Component{
     return (
       <div className="App">
         <header className="App-header">
+          <Navbar />
+          <h1>Womens World Cup Players!</h1>
           {this.state.players.map(player => (
             <PlayerCard player={player} key={player.id} />
           ))}
